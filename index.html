@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>كم تطلب؟ ومتى؟ | Q Retail Lab by Abdelrahman Kamel</title>
+<style>
+:root{--bg:#0b0f17;--card:#131a26;--line:#243049;--tx:#e8edf6;--mu:#93a1ba;--lime:#c6ff3d;--cy:#33e1ff;--mg:#ff4fd8;--or:#ffa63d;--rd:#ff5d5d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:radial-gradient(900px 400px at 85% -5%,#1b2a14,transparent),var(--bg);color:var(--tx);font:16px/1.7 "Segoe UI",Tahoma,system-ui,sans-serif}
+nav{position:sticky;top:0;z-index:9;background:#0b0f17ee;border-bottom:1px solid var(--line);display:flex;gap:6px;overflow-x:auto;padding:8px 12px;align-items:center}
+nav b{color:var(--lime);font-size:22px;margin-inline-end:8px}nav a{color:var(--mu);text-decoration:none;white-space:nowrap;padding:4px 10px;border-radius:99px;font-size:14px}nav a:hover,nav a:focus{color:var(--bg);background:var(--lime);outline:0}
+main{max-width:1100px;margin:auto;padding:12px}section{margin:34px 0}
+h1{font-size:clamp(28px,6vw,48px);line-height:1.25;margin:.3em 0}h2{font-size:24px;margin:0 0 6px;color:var(--lime)}h3{font-size:17px;margin:.2em 0}
+p,.mu{color:var(--mu)}.tag{display:inline-block;border:1px solid var(--or);color:var(--or);border-radius:99px;padding:2px 12px;font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin:10px 0}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}.g2{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.k{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 12px}.k:hover{border-color:var(--cy)}.k .v{font-size:28px;font-weight:700;color:var(--cy);line-height:1.2}.k .u{font-size:13px;color:var(--mu)}.k .l{font-size:14px}.k small{display:block;color:var(--mu);font-size:12px;line-height:1.4}
+.ctl{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}label{display:flex;flex-direction:column;font-size:14px;color:var(--mu);gap:2px}
+input,select,textarea,button{font:inherit;background:#0e1420;color:var(--tx);border:1px solid var(--line);border-radius:10px;padding:7px 9px;min-width:0}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--cy)}input.bad{border-color:var(--rd)}
+button{cursor:pointer;background:var(--lime);color:#111;font-weight:700;border:0}button.s{background:#1b2536;color:var(--tx);border:1px solid var(--line)}button:hover{filter:brightness(1.1)}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}svg{width:100%;height:auto;display:block}svg text{fill:#93a1ba;font-size:13px}
+.bar{display:flex;height:30px;border-radius:8px;overflow:hidden;background:#0e1420}.bar i{display:block;min-width:0}
+.lg span{margin-inline-end:14px;font-size:13px;color:var(--mu)}.lg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-inline-end:5px}
+.ins{border-inline-start:4px solid var(--or);padding:6px 12px;margin:8px 0;background:#1a1f2b;border-radius:8px}.ins.f{border-color:var(--lime)}.ins.n{border-color:var(--mu)}.ins b{font-size:12px;border-radius:99px;padding:1px 8px;background:#243049;margin-inline-end:6px}
+.sc{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:4px;border-bottom:1px solid var(--line);text-align:start}td input,td select{width:100%;min-width:70px}
+details{border-bottom:1px solid var(--line);padding:6px 0}summary{cursor:pointer;color:var(--cy)}code{direction:ltr;unicode-bidi:embed;color:var(--lime)}
+@media print{body{background:#fff;color:#000}nav,.ctl,.row,section:not(#overview):not(#insights){display:none}.card,.k{border-color:#999;background:#fff}.k .v,h2{color:#000}}
+section>p,header p+p{display:none}.k small{display:none}label>span{display:flex;justify-content:space-between}.o{color:var(--lime)}
+input[type=range]{accent-color:var(--lime);padding:0;width:100%;height:30px}.hint{color:var(--cy);margin:8px 0}
+details.adv{margin-top:10px}details.adv>summary{color:var(--mu);font-size:14px}.sum h2{display:inline}
+h1{background:linear-gradient(90deg,var(--lime),var(--cy) 60%,var(--mg));-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:900}
+.tag{transform:rotate(-2deg);background:#2a1a00;box-shadow:0 0 14px #ffa63d55}
+.card,.k{border-radius:22px;background:linear-gradient(160deg,#151d2c,#101622)}.k{transition:.2s}.k:hover{box-shadow:0 0 18px #33e1ff33;transform:translateY(-2px)}
+.k .v{font-weight:800;text-shadow:0 0 18px #33e1ff55}nav{backdrop-filter:blur(10px)}
+button{border-radius:99px;box-shadow:0 0 16px #c6ff3d44}button.s{box-shadow:none}
+.rings{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:6px 0 16px}.rg{width:132px;text-align:center;font-size:13px;color:var(--mu);line-height:1.4}.rg svg{width:124px;height:124px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<nav aria-label="التنقل"><b>Q</b><a href="#overview">نظرة عامة</a><a href="#demand">الطلب</a><a href="#stock">المخزون</a><a href="#policy">السياسة</a><a href="#sim">الإسقاط</a><a href="#po">التوريد</a><a href="#sales">الربحية</a><a href="#insights">الإجراءات</a><a href="#method">المنهجية</a></nav>
+<main>
+<header><span class="tag">نموذج تجريبي مستقل | جميع البيانات افتراضية</span> <span class="mu">إعداد: Abdelrahman Kamel</span>
+<h1>من المخزن للرف، كل قرار له رقم.</h1><p><b style="color:var(--cy)">Q Retail Lab — مختبر كيو للتجزئة الذكي.</b> محاكاة تفاعلية لقرارات الطلب والمخزون والتوريد والربحية في تجارة التجزئة.</p>
+<p>غيّر أي رقم في الصفحة وستتحدث كل المؤشرات والرسوم فورًا. السيناريو افتراضي بالكامل (منتج وهمي: لبن معبأ)، وليس بيانات أي شركة. هذا المشروع غير تابع لأي شركة ولا يستخدم شعارها.</p>
+<div class="row"><button id="reset">إعادة ضبط السيناريو</button><button class="s" id="csv">تصدير النتائج CSV</button><button class="s" onclick="print()">طباعة الملخص التنفيذي</button></div></header>
+
+
+<div class="card" id="verdict" role="status" aria-live="polite" style="border-color:var(--lime)"></div>
+<p class="hint">👆 حرّك الأشرطة وشاهد الأرقام والرسوم تتغير فورًا.</p>
+<section id="overview"><h2>أ. نظرة تنفيذية</h2><div class="rings" id="rings"></div><div class="grid" id="kpis" aria-live="polite"></div><details class="adv"><summary>مؤشرات إضافية</summary><div class="grid" id="kmore" style="margin-top:8px"></div></details></section>
+
+<section id="demand"><h2>ب. الطلب والانحراف المعياري</h2>
+<p>الانحراف المعياري يقيس تذبذب الطلب حول متوسطه، وليس هو التوقع نفسه. بيانات العينة هنا مولّدة افتراضيًا (30 يومًا).</p>
+<div class="card"><div class="ctl" data-ids="mMean,mSd,promo"></div><details class="adv"><summary>خيارات متقدمة: بيانات تاريخية خاصة بك</summary><div class="ctl" data-ids="src,sdT,cat"></div><label>أرقام الطلب اليومي (افصل بمسافة أو فاصلة)<textarea id="data" rows="4"></textarea></label><div class="row"><button class="s" id="sample">استعادة العينة</button></div></details><div class="grid" id="dstats"></div></div>
+<div class="card"><div id="dchart"></div><div class="lg"><span><i style="background:var(--cy)"></i>الطلب اليومي</span><span><i style="background:var(--lime)"></i>المتوسط ±1σ (داكن) و±2σ (فاتح)</span><span><i style="background:var(--mg)"></i>متوسط متحرك 7 أيام</span><span><i style="background:var(--rd)"></i>قيمة شاذة (>2σ)</span></div></div>
+<div class="card" hidden><h3>توزيع الطلب</h3><div id="hist"></div><p id="dnote"></p></div></section>
+
+<section id="stock"><h2>ج. حالة المخزون والمستودع</h2>
+<p>الفئات متنافية: المخزون الفعلي = متاح + فحص + محجوب + تالف. لا يُحسب المخزون القادم ضمن الفعلي حتى يُستلم.</p>
+<div class="card"><div class="ctl" data-ids="phys,insp"></div>
+<div class="row"><button class="s" data-ev="recv">استلام أول أمر مفتوح (يدخل الفحص)</button><button class="s" data-ev="rel">إفراج من الفحص</button><button class="s" data-ev="fail">رفض من الفحص (تالف)</button><button class="s" data-ev="dam">زيادة التالف من المتاح</button><button class="s" data-ev="po">إصدار أمر شراء</button><button class="s" data-ev="ship">شحن أول أمر مطلوب</button></div>
+<details class="adv"><summary>خيارات متقدمة</summary><div class="ctl" data-ids="blk,dmg,alloc,evQ"></div></details><div id="sdonut"></div><div class="bar" id="sbar" role="img" aria-label="توزيع المخزون"></div><div class="lg" id="slg" style="margin-top:6px"></div><p id="snote"></p></div></section>
+
+<section id="policy"><h2>د. المخزون الاحتياطي ونقطة إعادة الطلب</h2>
+<div class="card"><div class="ctl" data-ids="sl,ltM,ltS,Q"></div><details class="adv"><summary>خيارات متقدمة</summary><div class="ctl" data-ids="mod,moq,pack,oc,hc"></div></details><div class="grid" id="pol"></div><p id="polnote"></p></div>
+<div class="card"><div class="ctl" data-ids="sx"></div><h3>حساسية المخزون الاحتياطي</h3><div id="sens"></div></div></section>
+
+<section id="sim"><h2>هـ. إسقاط المخزون وخطر النفاد</h2>
+<p>محاكاة يومية بمراجعة مستمرة: عند هبوط وضع المخزون (متاح + قادم) إلى نقطة إعادة الطلب أو أقل يُصدر أمر بكمية Q ويصل بعد مدة التوريد + التأخير. الطلب غير الملبّى يُعدّ مبيعات ضائعة (وليس مؤجلًا).</p>
+<div class="card"><div class="ctl" data-ids="H,delay"></div><div id="schart"></div>
+<div class="lg"><span><i style="background:var(--lime)"></i>المخزون المتاح</span><span><i style="background:var(--or)"></i>المخزون الاحتياطي</span><span><i style="background:var(--cy)"></i>نقطة إعادة الطلب</span><span><i style="background:var(--mg)"></i>▼ إصدار أمر</span><span><i style="background:#fff"></i>● وصول شحنة</span><span><i style="background:var(--rd)"></i>فترة نفاد</span></div><p id="snote2"></p></div></section>
+
+<section id="po"><details class="sum"><summary><h2>و. أوامر الشراء والتوريد (بيانات افتراضية)</h2></summary>
+<p>موردون وهميون. اليوم 0 = اليوم الحالي؛ الأيام السالبة ماضية. الأمر المستلم يخرج من الأنبوب المفتوح تلقائيًا.</p>
+<div class="card"><div class="sc"><table><thead><tr><th>المرجع</th><th>المورد</th><th>الكمية</th><th>يوم الطلب</th><th>يوم التسليم المتوقع</th><th>يوم الاستلام الفعلي</th><th>الحالة</th><th>مرفوض</th><th></th></tr></thead><tbody id="pob"></tbody></table></div>
+<div class="row"><button class="s" id="addpo">إضافة أمر</button><button class="s" id="usehist">اعتمد مدة التوريد وتذبذبها من السجل</button></div><div class="grid" id="pks"></div></div></details></section>
+
+<section id="sales"><h2>ز. المبيعات والهامش</h2>
+<div class="card"><div class="ctl" data-ids="price,cost"></div><details class="adv"><summary>خيارات متقدمة</summary><div class="ctl" data-ids="shelf"></div></details><div id="mbar" style="margin:12px 0"></div><div class="grid" id="com"></div><p id="comnote"></p></div></section>
+
+<section id="insights"><h2>ح. الرؤى والإجراءات المقترحة</h2><p>كل بند قاعدة صريحة على أرقامك. «تحذير» يعني احتمال وليس تأكيدًا.</p><div id="ins"></div></section>
+
+<section id="method"><details class="sum"><summary><h2>ط. كيف نحسب المؤشرات؟</h2></summary><div class="card" id="meth"></div>
+<p><b>قيود صريحة:</b> التحليل لصنف واحد؛ الطلب اليومي في المحاكاة ثابت (متوسط) دون عشوائية؛ المبيعات الضائعة لا تعود؛ لا يوجد نموذج FEFO بدفعات (تُعرض تنبيهات الصلاحية فقط)؛ تكرار المراجعة غير مُنمذج (مراجعة يومية)؛ التوزيع الطبيعي افتراض تقريبي. الأرقام الافتراضية أمثلة تعليمية لا تمثل أي شركة.</p></details></section>
+</main>
+<script>
+/*CORE — pure calculation functions (tested independently)*/
+const Zs={"90":1.282,"95":1.645,"97.5":1.96,"99":2.326};
+const sum=a=>a.reduce((x,y)=>x+y,0);
+// sample std dev uses n-1 (default); population uses n
+function stat(a,pop){const n=a.length;if(!n)return null;const m=sum(a)/n,dn=pop?n:n-1;
+ const sd=dn>0?Math.sqrt(sum(a.map(x=>(x-m)**2))/dn):0,s=[...a].sort((x,y)=>x-y);
+ return{n,m,sd,cv:m>0?sd/m:null,min:s[0],max:s[n-1],med:n%2?s[(n-1)/2]:(s[n/2-1]+s[n/2])/2}}
+const ssA=(z,sd,L)=>z*sd*Math.sqrt(L);                                   // Model A: Z·σd·√L
+const ssB=(z,sd,d,L,sL)=>z*Math.sqrt(L*sd*sd+d*d*sL*sL);                 // Model B: Z·√(L·σd²+d²·σL²)
+function quant(a,p){const s=[...a].sort((x,y)=>x-y),i=p*(s.length-1),f=Math.floor(i);return s[f]+(s[Math.min(f+1,s.length-1)]-s[f])*(i-f)}
+function ssC(a,L,p){L=Math.max(1,Math.round(L));if(a.length<L+9)return null;           // Model C: empirical lead-time demand windows
+ const w=[];for(let i=0;i+L<=a.length;i++)w.push(sum(a.slice(i,i+L)));return Math.max(0,quant(w,p)-sum(w)/w.length)}
+function phi(x){const t=1/(1+.3275911*Math.abs(x/Math.SQRT2)),y=1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-.284496736)*t+.254829592)*t*Math.exp(-x*x/2);return .5*(1+(x<0?-y:y))}
+const eoq=(D,S,h)=>D>0&&S>0&&h>0?Math.sqrt(2*D*S/h):null;                // EOQ=√(2DS/h)
+const up=(q,moq,pack)=>{pack=Math.max(1,pack);return Math.ceil(Math.max(q,moq,0)/pack)*pack};
+// Daily simulation. open=[{day,qty}] pipeline arrivals. Orders when inventory position <= rop. Unmet demand = lost sales.
+function simulate({H,start,dp,rop,Q,L,delay,open}){let inv=start,pend=open.map(o=>({day:Math.max(1,Math.round(o.day+delay)),qty:o.qty})),
+ arrs=pend.map(p=>({...p})),inv_=[inv],orders=[],sold=0,lost=0,so=[];
+ const place=d=>{if(Q>0&&inv+sum(pend.map(p=>p.qty))<=rop){const a=d+Math.max(1,Math.round(L))+delay;pend.push({day:a,qty:Q});arrs.push({day:a,qty:Q});orders.push({day:d,arr:a,qty:Q})}};
+ place(0);
+ for(let d=1;d<=H;d++){pend=pend.filter(p=>{if(p.day===d){inv+=p.qty;return false}return true});
+  const s=Math.min(inv,dp);sold+=s;lost+=dp-s;if(dp-s>1e-9)so.push(d);inv-=s;inv_.push(inv);place(d)}
+ return{inv:inv_,orders,arrs:arrs.filter(a=>a.day<=H),sold,lost,so}}
+/*END CORE*/
+
+const f=(n,d=0)=>n==null||!isFinite(n)?"—":(+n).toLocaleString("en-US",{maximumFractionDigits:d,minimumFractionDigits:d});
+const $=id=>document.getElementById(id);
+const CAT={dairy:["ألبان معبأة",21],juice:["عصائر",90],water:["مياه معبأة",365],snack:["وجبات خفيفة",180],home:["منظفات منزلية",730]};
+const C={src:["مصدر الطلب والتذبذب","s","manual",[["manual","الأشرطة (يدوي)"],["data","من بيانات تاريخية"]]],sdT:["نوع الانحراف المعياري","s","s",[["s","عينة (n-1)"],["p","مجتمع (n)"]]],
+mMean:["متوسط الطلب اليومي (يدوي)","n",100],mSd:["الانحراف المعياري (يدوي)","n",20],promo:["زيادة طلب الترويج %","n",0],
+cat:["فئة الصنف","s","dairy",Object.entries(CAT).map(([k,v])=>[k,v[0]])],
+phys:["المخزون الفعلي (وحدة)","n",500],insp:["تحت فحص الجودة","n",80],blk:["محجوب / حجر","n",0],dmg:["تالف / منتهي","n",0],alloc:["محجوز / التزامات","n",0],evQ:["كمية الحدث","n",50],
+sl:["مستوى الخدمة (دورة)","s","95",[["90","90%"],["95","95%"],["97.5","97.5%"],["99","99%"]]],mod:["نموذج المخزون الاحتياطي","s","B",[["A","A: طلب متغير ومدة ثابتة"],["B","B: طلب ومدة متغيران"],["C","C: تجريبي من البيانات"]]],
+ltM:["متوسط مدة التوريد (يوم)","n",5],ltS:["انحراف مدة التوريد (يوم)","n",1],Q:["كمية الطلب Q","n",600],moq:["الحد الأدنى للطلب","n",1],pack:["حجم الكرتونة","n",1],
+oc:["تكلفة الأمر (SAR) للـEOQ","n",120],hc:["تكلفة الاحتفاظ SAR/وحدة/سنة","n",1.04],
+sx:["متغير الحساسية","s","sl",[["sl","مستوى الخدمة"],["sd","تذبذب الطلب"],["sL","تذبذب المدة"],["L","مدة التوريد"]]],
+H:["أفق التحليل (يوم)","n",30],delay:["تأخير التسليم (يوم)","n",0],price:["سعر البيع SAR","n",8.5],cost:["تكلفة الشراء SAR","n",5.2],shelf:["مدة الصلاحية (يوم)","n",21]};
+const PO0=[{r:"PO-1001",s:"مورد ألبان أ (وهمي)",q:300,o:-2,e:3,a:"",st:"intransit",rj:0},{r:"PO-0990",s:"مورد ألبان أ (وهمي)",q:400,o:-12,e:-7,a:-6,st:"released",rj:0},{r:"PO-0981",s:"مورد ألبان ب (وهمي)",q:500,o:-20,e:-15,a:-13,st:"released",rj:5},{r:"PO-0975",s:"مورد ألبان أ (وهمي)",q:350,o:-27,e:-22,a:-22,st:"released",rj:0},{r:"PO-0968",s:"مورد ألبان ب (وهمي)",q:450,o:-34,e:-29,a:-26,st:"released",rj:0}];
+const ST={ordered:"مطلوب",shipped:"مشحون",intransit:"في الطريق",received:"مستلم",hold:"حجز جودة",released:"مفرج عنه",cancelled:"ملغى"},OPEN=["ordered","shipped","intransit"],DONE=["received","hold","released"];
+let pos=JSON.parse(JSON.stringify(PO0)),LAST={};
+function sample(){let s=7,r=()=>(s=(s*16807)%2147483647)/2147483647,z=[];for(let i=0;i<30;i++)z.push(Math.sqrt(-2*Math.log(r()+1e-9))*Math.cos(6.2832*r()));
+ const st=stat(z);return z.map(x=>(100+20*(x-st.m)/st.sd).toFixed(1)).join(" ")}
+// build controls
+const R={mMean:[20,300,5],mSd:[0,100,1],promo:[0,100,5],ltM:[1,15,1],ltS:[0,5,.5],Q:[100,2000,50],phys:[0,3000,10],insp:[0,1000,10],price:[1,20,.1],cost:[1,20,.1],H:[7,60,1],delay:[0,10,1]};
+document.querySelectorAll(".ctl[data-ids]").forEach(el=>el.dataset.ids.split(",").forEach(id=>{const c=C[id],l=document.createElement("label"),sp=document.createElement("span");sp.textContent=c[0]+" ";
+ if(R[id]){const o=document.createElement("b");o.className="o";o.id="o_"+id;sp.append(o)}l.append(sp);
+ const i=document.createElement(c[1]=="s"?"select":"input");i.id=id;if(c[1]=="s"){c[3].forEach(o=>i.add(new Option(o[1],o[0])))}else if(R[id]){i.type="range";i.min=R[id][0];i.max=R[id][1];i.step=R[id][2]}else{i.type="number";i.min=0;i.step="any"}
+ l.append(i);el.append(l)}));
+// shared ids (promo) appear once only: remove duplicates
+function setDefaults(){Object.keys(C).forEach(k=>{if($(k))$(k).value=C[k][2]});$("data").value=sample();pos=JSON.parse(JSON.stringify(PO0));tbl();draw()}
+const V=id=>{const e=$(id);if(C[id][1]=="s")return e.value;const x=parseFloat(e.value),ok=isFinite(x)&&x>=0;e.classList.toggle("bad",!ok);return ok?x:0};
+const parse=()=>$("data").value.split(/[\s,;،]+/).map(parseFloat).filter(x=>isFinite(x)&&x>=0);
+const hist=()=>{const d=pos.filter(p=>DONE.includes(p.st)&&p.a!==""&&isFinite(+p.a));return d};
+function calc(){const v={};Object.keys(C).forEach(k=>{if($(k))v[k]=V(k)});
+ const arr=parse(),pop=v.sdT=="p",st=stat(arr,pop),useD=v.src=="data"&&st&&st.n>=2,k=1+v.promo/100;
+ const mean=useD?st.m:v.mMean,sd=useD?st.sd:v.mSd,dp=mean*k,sdp=sd*k,z=Zs[v.sl],L=v.ltM,sL=v.ltS;
+ let ss,note="",mod=v.mod;
+ if(mod=="C"){const e=ssC(arr.map(x=>x*k),L,+v.sl/100);if(e==null){mod="B";note="بيانات غير كافية للنموذج C (يلزم عدد أيام ≥ مدة التوريد+9)، تم استخدام B. "}else ss=e}
+ if(mod=="A")ss=ssA(z,sdp,L);if(mod=="B")ss=ssB(z,sdp,dp,L,sL);
+ const ltd=dp*L,rop=ltd+ss,rawA=v.phys-v.insp-v.blk-v.dmg,avail=Math.max(0,rawA),open=pos.filter(p=>OPEN.includes(p.st)),onOrd=sum(open.map(p=>p.q));
+ const unal=Math.max(0,avail-v.alloc),ip=unal+onOrd,Qe=up(v.Q,v.moq,v.pack),avg=ss+Qe/2,tgt=rop+Qe;
+ const sim=simulate({H:Math.max(1,Math.round(v.H)),start:unal,dp,rop,Q:Qe,L,delay:v.delay,open:open.map(p=>({day:p.e,qty:p.q}))});
+ const sLT=Math.sqrt(L*sdp*sdp+dp*dp*sL*sL),risk=sLT>0?1-phi((ip-ltd)/sLT):(ip<ltd?1:0);
+ const rev=sim.sold*v.price,cogs=sim.sold*v.cost,gp=rev-cogs,gm=rev>0?gp/rev:null,D=dp*365,E=eoq(D,v.oc,v.hc);
+ const h=hist(),leads=h.map(p=>p.a-p.o),late=h.map(p=>p.a-p.e),hs=stat(leads,false);
+ return{v,arr,st,useD,mean,sd,dp,sdp,z,L,sL,ss,note,mod,ltd,rop,avail,rawA,onOrd,unal,ip,Qe,avg,tgt,sim,risk,rev,cogs,gp,gm,D,E,h,leads,late,hs,open,cover:dp>0?unal/dp:null,tos:sim.so.length?sim.so[0]:null}}
+
+/* ---- charts (SVG strings) ---- */
+function bars(pts,col,fmt=f){const W=640,Hh=220,m=Math.max(...pts.map(p=>p[1]),1e-9),w=W/pts.length;
+ return`<svg viewBox="0 0 ${W} ${Hh+30}">`+pts.map((p,i)=>{const h=p[1]/m*(Hh-30);return`<rect x="${i*w+6}" y="${Hh-h}" width="${w-12}" height="${h}" rx="5" fill="${col}"/><text x="${i*w+w/2}" y="${Hh-h-5}" text-anchor="middle">${fmt(p[1])}</text><text x="${i*w+w/2}" y="${Hh+18}" text-anchor="middle">${p[0]}</text>`}).join("")+`</svg>`}
+function demandChart(a,m,sd){if(a.length<2)return"<p>أدخل يومين على الأقل لعرض الرسم. (بيانات غير كافية)</p>";
+ const W=640,Hh=260,P=34,lo=Math.min(...a,m-2*sd)-5,hi=Math.max(...a,m+2*sd)+5,X=i=>P+i*(W-P-8)/(a.length-1),Y=y=>Hh-24-(y-lo)/(hi-lo)*(Hh-40);
+ const band=(k,op)=>`<rect x="${P}" y="${Y(m+k*sd)}" width="${W-P-8}" height="${Math.max(0,Y(m-k*sd)-Y(m+k*sd))}" fill="var(--lime)" opacity="${op}"/>`;
+ const roll=a.map((_,i)=>i<6?null:sum(a.slice(i-6,i+1))/7).map((y,i)=>y==null?"":`${X(i)},${Y(y)}`).filter(Boolean).join(" ");
+ return`<svg viewBox="0 0 ${W} ${Hh}">${band(2,.07)}${band(1,.13)}<line x1="${P}" x2="${W-8}" y1="${Y(m)}" y2="${Y(m)}" stroke="var(--lime)" stroke-dasharray="5 4"/>
+ <polyline fill="none" stroke="var(--cy)" stroke-width="2.5" points="${a.map((y,i)=>X(i)+","+Y(y)).join(" ")}"/><polyline fill="none" stroke="var(--mg)" stroke-width="2" points="${roll}"/>
+ ${a.map((y,i)=>sd>0&&Math.abs(y-m)>2*sd?`<circle cx="${X(i)}" cy="${Y(y)}" r="5" fill="var(--rd)"/>`:"").join("")}
+ <text x="2" y="${Y(hi-5)+4}">${f(hi,0)}</text><text x="2" y="${Y(lo+5)}">${f(lo,0)}</text><text x="${W-8}" y="${Hh-4}" text-anchor="end">يوم ${a.length}</text></svg>`}
+function histo(a){if(a.length<5)return"<p>بيانات غير كافية للتوزيع (يلزم 5 قيم).</p>";const lo=Math.min(...a),hi=Math.max(...a),n=8,w=(hi-lo)/n||1,b=Array(n).fill(0);a.forEach(x=>b[Math.min(n-1,Math.floor((x-lo)/w))]++);
+ return bars(b.map((c,i)=>[f(lo+i*w),c]),"var(--cy)")}
+function simChart(c){const s=c.sim,N=s.inv.length-1,W=640,Hh=280,P=40,mx=Math.max(...s.inv,c.rop,c.ss,10)*1.1,X=d=>P+d*(W-P-10)/N,Y=y=>Hh-26-y/mx*(Hh-46);
+ const so=s.so.map(d=>`<rect x="${X(d-1)}" y="10" width="${X(1)-X(0)}" height="${Hh-36}" fill="var(--rd)" opacity=".18"/>`).join("");
+ return`<svg viewBox="0 0 ${W} ${Hh}">${so}<line x1="${P}" x2="${W-10}" y1="${Y(c.ss)}" y2="${Y(c.ss)}" stroke="var(--or)" stroke-dasharray="6 4"/><line x1="${P}" x2="${W-10}" y1="${Y(c.rop)}" y2="${Y(c.rop)}" stroke="var(--cy)" stroke-dasharray="6 4"/>
+ <polyline fill="none" stroke="var(--lime)" stroke-width="3" points="${s.inv.map((y,d)=>X(d)+","+Y(y)).join(" ")}"/>
+ ${s.orders.map(o=>`<text x="${X(o.day)}" y="${Y(0)-4}" fill="var(--mg)" text-anchor="middle" style="fill:var(--mg)">▼</text>`).join("")}
+ ${s.arrs.map(a=>`<circle cx="${X(a.day)}" cy="${Y(s.inv[a.day])}" r="5" fill="#fff"><title>وصول ${f(a.qty)} وحدة في اليوم ${a.day}</title></circle>`).join("")}
+ <text x="2" y="${Y(mx)+14}">${f(mx,0)}</text><text x="2" y="${Y(0)}">0</text><text x="${W-10}" y="${Hh-4}" text-anchor="end">يوم ${N}</text></svg>`}
+
+function gauge(c){const mx=Math.max(c.tgt,c.ip,c.rop)*1.05||1,p=x=>Math.min(100,Math.max(0,x/mx*100)),mk=(x,col,t,top)=>`<i style="position:absolute;top:-6px;bottom:-6px;inset-inline-start:${p(x)}%;border-inline-start:2px dashed ${col}"><small style="position:absolute;${top?"top:-20px":"bottom:-22px"};white-space:nowrap;color:${col};font-size:12px;font-style:normal">${t} ${f(x)}</small></i>`;
+ return`<div style="position:relative;height:34px;margin:30px 0 32px;background:#0e1420;border-radius:10px" role="img" aria-label="مقياس وضع المخزون"><div style="width:${p(c.ip)}%;height:100%;border-radius:10px;background:${c.ip<c.rop?"var(--or)":"var(--lime)"}"></div>${mk(c.ss,"var(--or)","احتياطي",1)}${mk(c.rop,"var(--cy)","إعادة الطلب",0)}</div><div class="mu" style="font-size:13px">الشريط = وضع المخزون (${f(c.ip)}). الأخضر: فوق نقطة إعادة الطلب، البرتقالي: تحتها.</div>`}
+function ring(p,col,big,small){p=Math.max(0,Math.min(100,p||0));const r=44,c=2*Math.PI*r;
+ return`<div class="rg"><svg viewBox="0 0 110 110" role="img" aria-label="${small}: ${big}"><circle cx="55" cy="55" r="${r}" fill="none" stroke="#1b2536" stroke-width="12"/><circle cx="55" cy="55" r="${r}" fill="none" stroke="${col}" stroke-width="12" stroke-linecap="round" stroke-dasharray="${c*p/100} ${c}" transform="rotate(-90 55 55)" style="filter:drop-shadow(0 0 6px ${col});transition:stroke-dasharray .4s"/><text x="55" y="61" text-anchor="middle" style="fill:#e8edf6;font-size:20px;font-weight:800">${big}</text></svg>${small}</div>`}
+function donut(parts,cen,sub){const r=44,c=2*Math.PI*r,t=Math.max(1,sum(parts.map(p=>p[1])));let off=0;
+ const seg=parts.filter(p=>p[1]>0).map(p=>{const l=p[1]/t*c,x=`<circle cx="55" cy="55" r="${r}" fill="none" stroke="${p[2]}" stroke-width="16" stroke-dasharray="${l} ${c-l}" stroke-dashoffset="${-off}" transform="rotate(-90 55 55)"><title>${p[0]}: ${f(p[1])}</title></circle>`;off+=l;return x}).join("");
+ return`<svg viewBox="0 0 110 110" style="max-width:230px;margin:6px auto" role="img" aria-label="توزيع المخزون الفعلي"><circle cx="55" cy="55" r="${r}" fill="none" stroke="#1b2536" stroke-width="16"/>${seg}<text x="55" y="56" text-anchor="middle" style="fill:#e8edf6;font-size:20px;font-weight:800">${cen}</text><text x="55" y="70" text-anchor="middle" style="font-size:9px">${sub}</text></svg>`}
+let q=0;const sched=()=>q||(q=requestAnimationFrame(()=>{q=0;draw()}));   // batch rapid slider moves into one redraw
+/* ---- tables ---- */
+function tbl(){$("pob").innerHTML=pos.map((p,i)=>`<tr>${[["r","text"],["s","text"],["q","number"],["o","number"],["e","number"],["a","number"]].map(([k,t])=>`<td><input aria-label="${k}" type="${t}" data-i="${i}" data-k="${k}" value="${p[k]}"></td>`).join("")}
+ <td><select data-i="${i}" data-k="st">${Object.entries(ST).map(([k,n])=>`<option value="${k}"${k==p.st?" selected":""}>${n}</option>`).join("")}</select></td>
+ <td><input type="number" min="0" data-i="${i}" data-k="rj" value="${p.rj}"></td><td><button class="s" data-del="${i}" aria-label="حذف">✕</button></td></tr>`).join("")}
+
+/* ---- render ---- */
+function draw(){const c=calc(),v=c.v;LAST=c;Object.keys(R).forEach(k=>{if($("o_"+k))$("o_"+k).textContent=f($(k).value,R[k][2]<1?1:0)});
+ const K=[["متوسط الطلب اليومي",f(c.dp,1),"وحدة/يوم","الطلب المخطط بعد الترويج"],["انحراف الطلب اليومي",f(c.sdp,1),"وحدة","مقياس التذبذب لا التوقع"],["المخزون الفعلي",f(v.phys),"وحدة","كل ما استُلم وما زال بالمستودع"],["المتاح للبيع",f(c.avail),"وحدة","الفعلي ناقص الفحص والمحجوب والتالف"],["تحت فحص الجودة",f(v.insp),"وحدة","غير متاح حتى الإفراج"],["محجوب وتالف",f(v.blk+v.dmg),"وحدة","خارج البيع"],["أوامر شراء مفتوحة",f(c.onOrd),"وحدة","مطلوب/مشحون/في الطريق، غير مستلم"],["وضع المخزون IP",f(c.ip),"وحدة","متاح غير محجوز + قادم"],["المخزون الاحتياطي",f(c.ss),"وحدة","يحمي من تذبذب الطلب والتوريد"],["نقطة إعادة الطلب",f(c.rop),"وحدة","طلب متوقع خلال التوريد + احتياطي"],["متوسط المخزون",f(c.avg),"وحدة","احتياطي + Q/2 (مبسّط)"],["أيام التغطية",f(c.cover,1),"يوم","المتاح غير المحجوز ÷ الطلب"],["خطر النفاد خلال التوريد",c.risk==null?"—":f(c.risk*100,1),"%","احتمال تقريبي (توزيع طبيعي مفترض)"],["الإيراد المتوقع",f(c.rev),"SAR","من المبيعات المحاكاة ضمن الأفق"],["الربح الإجمالي",f(c.gp),"SAR","إيراد − تكلفة البضاعة المباعة"],["هامش الربح",c.gm==null?"—":f(c.gm*100,1),"%","الربح ÷ الإيراد (ليس markup)"]];
+ const card=k=>`<div class="k" title="${k[3]}"><div class="l">${k[0]}</div><span class="v">${k[1]}</span> <span class="u">${k[2]}</span><small>${k[3]}</small></div>`,key=[3,7,8,9,11,12,15];$("kpis").innerHTML=key.map(i=>card(K[i])).join("");$("kmore").innerHTML=K.filter((_,i)=>!key.includes(i)).map(card).join("");
+ {const cv=c.cover==null?0:c.cover,rp=c.rop>0?c.ip/c.rop*100:100;$("rings").innerHTML=ring(100-c.risk*100,c.risk>.2?"var(--or)":"var(--lime)",f(100-c.risk*100)+"%","أمان من النفاد خلال التوريد")+ring(rp,rp<100?"var(--or)":"var(--cy)",f(rp)+"%","المخزون مقابل نقطة الطلب")+ring(c.L>0?cv/c.L*100:100,cv<c.L?"var(--or)":"var(--mg)",f(cv,1)+" ي","تغطية المتاح مقابل مدة التوريد")+ring(c.gm==null?0:c.gm*100,"var(--lime)",c.gm==null?"—":f(c.gm*100)+"%","هامش الربح")}
+ const st=c.st;$("dstats").innerHTML=!st?"<p>بيانات غير كافية للحكم</p>":[["المتوسط",f(st.m,1)],["الانحراف المعياري ("+(v.sdT=="p"?"مجتمع":"عينة")+")",f(st.sd,2)],["معامل التباين CV",st.cv==null?"—":f(st.cv*100,1)+"%"],["أدنى",f(st.min,1)],["أعلى",f(st.max,1)],["المدى",f(st.max-st.min,1)],["الوسيط",f(st.med,1)],["عدد القيم",st.n],["قيم شاذة >2σ",c.arr.filter(x=>st.sd>0&&Math.abs(x-st.m)>2*st.sd).length]].map(x=>`<div class="k"><div class="l">${x[0]}</div><span class="v" style="font-size:22px">${x[1]}</span></div>`).join("");
+ $("dchart").innerHTML=demandChart(c.arr,c.mean,c.sd);$("hist").innerHTML=histo(c.arr);
+ $("dnote").textContent=(v.src=="manual"?"المصدر الحالي: إدخال يدوي (الرسم يعرض السلسلة فقط). ":c.useD?"":"بيانات التاريخ غير كافية؛ استُخدمت القيم اليدوية. ")+"لا نختبر الطبيعية هنا؛ حسابات Z تفترض توزيعًا مناسبًا.";
+ const parts=[["متاح غير محجوز",c.unal,"var(--lime)"],["محجوز",Math.min(v.alloc,c.avail),"var(--mg)"],["فحص",v.insp,"var(--cy)"],["محجوب",v.blk,"var(--or)"],["تالف",v.dmg,"var(--rd)"]],tot=Math.max(1,sum(parts.map(p=>p[1])));
+ $("sbar").innerHTML=parts.map(p=>`<i style="width:${p[1]/tot*100}%;background:${p[2]}" title="${p[0]}"></i>`).join("");
+ $("sdonut").innerHTML=donut(parts,f(v.phys),"وحدة فعلية");
+ $("slg").innerHTML=parts.map(p=>`<span><i style="background:${p[2]}"></i>${p[0]}: ${f(p[1])}</span>`).join("")+`<span>قادم (خارج الفعلي): ${f(c.onOrd)}</span>`;
+ $("snote").textContent=c.rawA<0?"تنبيه: مجموع الفحص والمحجوب والتالف أكبر من المخزون الفعلي؛ صحّح الأرقام.":"المحجوز التزام ضمن المتاح (لا يُجمع مرتين). قيد الفحص لا يدخل وضع المخزون إلا بعد الإفراج.";
+ const E=c.E;$("pol").innerHTML=[["الطلب خلال التوريد",f(c.ltd)],["المخزون الاحتياطي",f(c.ss)],["نقطة إعادة الطلب",f(c.rop)],["الحد الأدنى للمخزون",f(c.ss)],["Q الفعلية (MOQ/كرتونة)",f(c.Qe)],["الحد الأقصى المستهدف",f(c.tgt)],["EOQ",E==null?"بيانات ناقصة":f(E)],["Q مُوصى (مُقرّبة)",E==null?"—":f(up(E,v.moq,v.pack))],["أيام الدورة",f(c.dp>0?c.Qe/c.dp:null,1)],["أوامر/سنة",f(c.Qe>0?c.D/c.Qe:null,1)]].map(x=>`<div class="k"><div class="l">${x[0]}</div><span class="v" style="font-size:22px">${x[1]}</span></div>`).join("");
+ $("polnote").textContent=c.note+"النموذج المستخدم: "+c.mod+". الزناد هو وضع المخزون (IP) وليس المتاح فقط. مستوى الخدمة هنا هو احتمال عدم النفاد في الدورة وليس نسبة التلبية (fill rate).";
+ const sx=v.sx,base={sl:v.sl,sd:c.sdp,sL:c.sL,L:c.L},fn=o=>c.mod=="A"?ssA(Zs[o.sl],o.sd,o.L):ssB(Zs[o.sl],o.sd,c.dp,o.L,o.sL);
+ let pts;if(sx=="sl")pts=Object.keys(Zs).map(k=>[k+"%",fn({...base,sl:k})]);else if(sx=="sd")pts=[0,.5,1,1.5,2].map(m=>[f(c.sdp*m)+"σ",fn({...base,sd:c.sdp*m})]);else if(sx=="sL")pts=[0,.5,1,1.5,2,3].map(x=>[x+" يوم",fn({...base,sL:x})]);else pts=[1,3,5,7,9].map(x=>[x+" يوم",fn({...base,L:x})]);
+ $("sens").innerHTML=bars(pts,"var(--lime)");
+ $("schart").innerHTML=simChart(c);const s=c.sim;
+ $("snote2").textContent=`مبيعات محاكاة ${f(s.sold)} وحدة؛ ضائع ${f(s.lost)} وحدة؛ أيام النفاد ${s.so.length}${c.tos?" (أولها اليوم "+c.tos+")":""}؛ أوامر صدرت ${s.orders.length}.`;
+ // PO KPIs
+ const od=c.open.filter(p=>p.e<0),inh=c.open.filter(p=>p.e+v.delay<=v.H),ot=c.late.filter(x=>x<=0).length;
+ $("pks").innerHTML=[["مفتوح (أنبوب)",f(c.onOrd)],["في الطريق/مشحون",f(sum(c.open.filter(p=>p.st!="ordered").map(p=>p.q)))],["متأخر",f(sum(od.map(p=>p.q)))],["قادم خلال الأفق",f(sum(inh.map(p=>p.q)))],["متوسط مدة التوريد",c.hs?f(c.hs.m,1)+" يوم":"بيانات غير كافية"],["انحراف المدة",c.hs&&c.hs.n>=3?f(c.hs.sd,2)+" يوم":"بيانات غير كافية"],["التسليم في الموعد",c.h.length>=3?f(ot/c.h.length*100)+"%":"بيانات غير كافية"],["متوسط التأخير",c.late.length?f(sum(c.late)/c.late.length,1)+" يوم":"—"],["المستلم الصافي (بعد الرفض)",f(sum(c.h.map(p=>p.q-p.rj)))]].map(x=>`<div class="k"><div class="l">${x[0]}</div><span class="v" style="font-size:20px">${x[1]}</span></div>`).join("");
+ $("com").innerHTML=[["مبيعات متوقعة (وحدة)",f(s.sold)],["الإيراد SAR",f(c.rev)],["تكلفة البضاعة المباعة",f(c.cogs)],["الربح الإجمالي",f(c.gp)],["الهامش",c.gm==null?"—":f(c.gm*100,1)+"%"],["Markup على التكلفة",v.cost>0?f((v.price-v.cost)/v.cost*100,1)+"%":"—"],["مبيعات ضائعة (وحدة)",f(s.lost)],["إيراد ضائع محتمل SAR",f(s.lost*v.price)]].map(x=>`<div class="k"><div class="l">${x[0]}</div><span class="v" style="font-size:22px">${x[1]}</span></div>`).join("");
+ {const cs=v.price>0?Math.min(100,v.cost/v.price*100):100;$("mbar").innerHTML=`<div class="bar"><i style="width:${cs}%;background:var(--or)"></i><i style="width:${100-cs}%;background:var(--lime)"></i></div><div class="lg" style="margin-top:6px"><span><i style="background:var(--or)"></i>تكلفة ${f(cs)}%</span><span><i style="background:var(--lime)"></i>ربح ${f(100-cs)}% من كل ريال</span></div>`}
+ $("comnote").textContent="المبيعات = ما يتوفر فعلًا في المحاكاة (مخزون + شحنات تصل ضمن الأفق). الطلب غير الملبّى يُحسب ضائعًا ولا يُفترض أنه كان سيُباع بالكامل — هذا افتراض، والإيراد الضائع تقدير أعلى.";
+ // insights
+ const I=[],add=(t,m)=>I.push(`<div class="ins ${t=="f"?"f":t=="n"?"n":""}"><b>${t=="f"?"حقيقة محسوبة":t=="n"?"بيانات غير كافية للحكم":"تحذير"}</b>${m}</div>`);
+ if(c.avail<c.rop)add("f",`المتاح (${f(c.avail)}) أقل من نقطة إعادة الطلب (${f(c.rop)}).`);
+ if(c.ip<c.rop)add("f",`وضع المخزون (${f(c.ip)}) أقل من نقطة إعادة الطلب: القاعدة تقتضي إصدار أمر بنحو ${f(c.Qe)} وحدة.`);else add("f",`وضع المخزون (${f(c.ip)}) أعلى من نقطة إعادة الطلب؛ لا أمر جديد مطلوب وفق القاعدة.`);
+ if(s.so.length)add("w",`المحاكاة تُظهر ${s.so.length} يوم نفاد محتمل خلال ${v.H} يوم (أولها اليوم ${c.tos}). هذا خطر وليس تأكيدًا.`);
+ const eta=Math.min(...c.open.map(p=>p.e+v.delay),1e9);if(c.tos&&c.open.length&&eta>c.tos)add("w",`أقرب شحنة مفتوحة تصل يوم ${eta}، بعد أول نفاد محتمل (يوم ${c.tos}).`);
+ if(v.phys>0&&v.insp/v.phys>.2)add("w",`${f(v.insp/v.phys*100)}% من المخزون الفعلي تحت الفحص؛ سرّع قرار الجودة.`);
+ if(c.st&&c.st.cv!=null)c.st.cv>.3?add("w",`تذبذب الطلب مرتفع (CV=${f(c.st.cv*100)}%) — العتبة 30% افتراض قابل للتغيير.`):add("f",`CV الطلب ${f(c.st.cv*100)}%.`);else add("n","تذبذب الطلب");
+ c.h.length>=3?(ot/c.h.length<.7?add("w",`التسليم في الموعد ${f(ot/c.h.length*100)}% فقط في السجل؛ فكّر برفع تذبذب المدة أو تنويع الموردين.`):add("f",`التسليم في الموعد ${f(ot/c.h.length*100)}%.`)):add("n","موثوقية الموردين");
+ if(c.cover!=null&&c.cover>v.shelf)add("w",`أيام التغطية (${f(c.cover)}) تتجاوز مدة الصلاحية (${v.shelf} يوم): خطر انتهاء قبل البيع. (لا نموذج FEFO بدفعات هنا.)`);
+ if(c.dp>0&&c.tgt/c.dp>v.shelf)add("w",`الحد الأقصى المستهدف يغطي ${f(c.tgt/c.dp)} يوم، أكثر من مدة الصلاحية؛ خفّض Q.`);
+ if(c.ip>c.tgt)add("w","وضع المخزون فوق الحد الأقصى المستهدف: مخزون زائد.");
+ if(c.gm!=null&&c.gm<0)add("w","هامش الربح سالب: السعر أقل من التكلفة.");else if(c.gm==null)add("n","الهامش (لا مبيعات/سعر)");
+ const inc=sum(c.open.filter(p=>p.e+v.delay<=v.H).map(p=>p.q));if(c.dp*v.H>c.unal+inc)add("w",`الطلب المتوقع (${f(c.dp*v.H)}) أكبر من المتاح + القادم ضمن الأفق (${f(c.unal+inc)}) قبل أي أوامر جديدة.`);
+ $("ins").innerHTML=I.join("");
+ const need=c.ip<c.rop,cv=c.cover;
+ $("verdict").innerHTML=`<h3>الخلاصة الآن</h3><p style="color:var(--tx);margin:.2em 0">${need?`⚠️ المخزون المتاح + القادم (${f(c.ip)} وحدة) أقل من نقطة الأمان (${f(c.rop)}). المقترح: <b>اطلب نحو ${f(c.Qe)} وحدة الآن</b>.`:`✅ الوضع مريح حاليًا: المخزون المتاح + القادم (${f(c.ip)} وحدة) أعلى من نقطة الأمان (${f(c.rop)}). لا حاجة لأمر جديد الآن.`}</p><p style="margin:.2em 0">المتاح للبيع يكفي نحو <b>${f(cv,1)} يوم</b>. احتمال النفاد قبل وصول التوريد القادم ≈ <b>${f(c.risk*100)}%</b> (تقدير تقريبي، وليس تأكيدًا). ${c.sim.so.length?`المحاكاة تُظهر ${c.sim.so.length} يوم نفاد محتمل خلال ${v.H} يوم.`:"المحاكاة لا تُظهر نفادًا خلال الأفق."}</p>`+gauge(c);
+ }
+
+const M=[["المخزون الفعلي مقابل المتاح","الفعلي = كل ما استُلم؛ المتاح = الفعلي − فحص − محجوب − تالف.","بيانات الحالات متنافية؛ لا يشمل القادم."],["وضع المخزون IP","IP = (المتاح − المحجوز) + المفتوح (غير المستلم) − طلبات متأخرة","هو أساس زناد إعادة الطلب؛ مخزون الفحص خارجه حتى الإفراج."],["الانحراف المعياري والتباين","s = √(Σ(x−x̄)²/(n−1)); CV = s/x̄","عينة n−1 افتراضيًا؛ يقيس التذبذب لا التوقع؛ CV غير معرّف عند متوسط صفر."],["المخزون الاحتياطي (A)","SS = Z·σd·√L","مدة ثابتة وطلب مستقل يوميًا."],["المخزون الاحتياطي (B)","SS = Z·√(L·σd² + d̄²·σL²)","استقلال الطلب والمدة؛ كل شيء بالأيام."],["المخزون الاحتياطي (C)","SS = مئين الطلب خلال نوافذ L يوم − متوسطها","يحتاج بيانات كافية؛ نوافذ متداخلة فتقديرها تقريبي."],["مستوى الخدمة مقابل fill rate","Z: 90%=1.282، 95%=1.645، 97.5%=1.960، 99%=2.326","مستوى الدورة = احتمال عدم النفاد في الدورة؛ ليس نسبة الطلب الملبّى."],["نقطة إعادة الطلب","ROP = d̄·L + SS","زناد على IP لا على المتاح؛ ليست الحد الأقصى."],["المخزون الدوري والمتوسط","متوسط الدوري = Q/2؛ متوسط المخزون = SS + Q/2","تبسيط يفترض استهلاكًا منتظمًا."],["الحد الأقصى المستهدف","ROP + Q (تعريف مبسّط)","سياسة افتراضية وليست معيارًا عامًا."],["EOQ","EOQ = √(2·D·S/h)","يحتاج تكلفة الأمر والاحتفاظ؛ يُقرّب لمضاعف الكرتونة وMOQ."],["الإيراد والهامش","الإيراد = وحدات مباعة × السعر؛ GP = الإيراد − COGS؛ الهامش = GP/الإيراد","الهامش ≠ markup (GP/التكلفة)؛ المبيعات لا تتجاوز المتاح + الواصل."]];
+$("meth").innerHTML=M.map(m=>`<details><summary>${m[0]}</summary><p><b>المعادلة:</b> <code>${m[1]}</code><br><b>افتراضات وحدود:</b> ${m[2]}</p></details>`).join("");
+
+// events
+document.addEventListener("input",e=>{const t=e.target;
+ if(t.dataset&&t.dataset.i!==undefined){const p=pos[+t.dataset.i],k=t.dataset.k;p[k]=["r","s","st"].includes(k)?t.value:(t.value===""?"":+t.value);if(k=="st"&&DONE.includes(t.value)&&p.a==="")p.a=0}
+ if(t.id=="cat"){$("shelf").value=CAT[t.value][1]}if(t.id in C||t.id=="data"||t.dataset.i!==undefined)sched()});
+document.addEventListener("click",e=>{const t=e.target;if(t.dataset&&t.dataset.try){const[k,x]=t.dataset.try.split(":");$(k).value=x;draw();$("verdict").scrollIntoView({block:"center"});return}
+ const ev=t.dataset&&t.dataset.ev,n=()=>V("evQ"),I=id=>$(id),g=id=>+I(id).value||0;
+ if(t.dataset&&t.dataset.del!==undefined){pos.splice(+t.dataset.del,1);tbl();draw();return}
+ if(!ev)return;const o=pos.filter(p=>OPEN.includes(p.st)).sort((a,b)=>a.e-b.e);
+ if(ev=="recv"&&o[0]){const p=o[0];p.st="hold";p.a=0;I("phys").value=g("phys")+p.q;I("insp").value=g("insp")+p.q}
+ if(ev=="rel"){const x=Math.min(n(),g("insp"));I("insp").value=g("insp")-x}
+ if(ev=="fail"){const x=Math.min(n(),g("insp"));I("insp").value=g("insp")-x;I("dmg").value=g("dmg")+x}
+ if(ev=="dam"){const x=Math.min(n(),LAST.avail);I("dmg").value=g("dmg")+x}
+ if(ev=="po")pos.push({r:"PO-"+(1002+pos.length),s:"مورد ألبان أ (وهمي)",q:LAST.Qe,o:0,e:Math.round(g("ltM")),a:"",st:"ordered",rj:0});
+ if(ev=="ship"){const x=pos.find(p=>p.st=="ordered");if(x)x.st="intransit"}
+ tbl();draw()});
+$("addpo").onclick=()=>{pos.push({r:"PO-"+(1002+pos.length),s:"مورد (وهمي)",q:0,o:0,e:5,a:"",st:"ordered",rj:0});tbl();draw()};
+$("usehist").onclick=()=>{const c=LAST;if(c.hs&&c.hs.n>=3){$("ltM").value=c.hs.m.toFixed(2);$("ltS").value=c.hs.sd.toFixed(2);draw()}else alert("بيانات غير كافية للحكم: يلزم 3 أوامر مستلمة على الأقل.")};
+$("sample").onclick=()=>{$("data").value=sample();draw()};$("reset").onclick=setDefaults;
+$("csv").onclick=()=>{const c=LAST,rows=[["المؤشر","القيمة"],["متوسط الطلب",c.dp],["انحراف الطلب",c.sdp],["المتاح",c.avail],["وضع المخزون",c.ip],["المخزون الاحتياطي",c.ss],["نقطة إعادة الطلب",c.rop],["متوسط المخزون",c.avg],["أيام التغطية",c.cover],["خطر النفاد %",c.risk*100],["الإيراد",c.rev],["الربح الإجمالي",c.gp],["الهامش %",c.gm==null?"":c.gm*100],["ملاحظة","بيانات افتراضية للتعليم فقط"]];
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+rows.map(r=>r.join(",")).join("\n")],{type:"text/csv"}));a.download="q-retail-lab.csv";a.click()};
+setDefaults();
+</script></body></html>
